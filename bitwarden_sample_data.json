@@ -1,0 +1,185 @@
+{
+  "encrypted": false,
+  "folders": [
+    {
+      "id": "e95f8116-1842-43ab-bd91-ae450120c631",
+      "name": "Rosenberg Library"
+    }
+  ],
+  "items": [
+    {
+      "id": "ba014c7d-6319-4635-9b48-ae450127a646",
+      "organizationId": null,
+      "folderId": null,
+      "type": 3,
+      "reprompt": 0,
+      "name": "EH Example Visa",
+      "notes": "This is an example card",
+      "favorite": false,
+      "card": {
+        "cardholderName": "Evan Q Hawman",
+        "brand": "Visa",
+        "number": "1234567891014456",
+        "expMonth": "1",
+        "expYear": "2025",
+        "code": "123"
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "4e87c18c-c263-408a-861e-ae45012de3e6",
+      "organizationId": null,
+      "folderId": "e95f8116-1842-43ab-bd91-ae450120c631",
+      "type": 4,
+      "reprompt": 0,
+      "name": "Evan Hawman",
+      "notes": "These are some notes",
+      "favorite": false,
+      "identity": {
+        "title": "Mr",
+        "firstName": "Evan",
+        "middleName": "Q",
+        "lastName": "Hawman",
+        "address1": "2310 Sealy Avenue",
+        "address2": null,
+        "address3": null,
+        "city": "Galveston",
+        "state": "Texas",
+        "postalCode": "77550",
+        "country": "United States of America",
+        "company": "Rosenberg Library",
+        "email": "ehawman@rosenberg-library.org",
+        "phone": "4097638854;138",
+        "ssn": "1234567890",
+        "username": "ehawman",
+        "passportNumber": "12345678",
+        "licenseNumber": "98765432"
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "182a093a-8c43-478f-ab10-ae45012c9b83",
+      "organizationId": null,
+      "folderId": "e95f8116-1842-43ab-bd91-ae450120c631",
+      "type": 1,
+      "reprompt": 0,
+      "name": "MyExample",
+      "notes": "Notes1",
+      "favorite": false,
+      "fields": [
+        {
+          "name": "MyBool",
+          "value": "true",
+          "type": 2,
+          "linkedId": null
+        },
+        {
+          "name": "MyText",
+          "value": "abcd",
+          "type": 0,
+          "linkedId": null
+        },
+        {
+          "name": "MyHidden",
+          "value": "efgh",
+          "type": 1,
+          "linkedId": null
+        },
+        {
+          "name": "MyLinked",
+          "value": null,
+          "type": 3,
+          "linkedId": 100
+        }
+      ],
+      "login": {
+        "uris": [
+          {
+            "match": null,
+            "uri": "www.mydefault.com"
+          },
+          {
+            "match": 0,
+            "uri": "www.mybase.com"
+          },
+          {
+            "match": 1,
+            "uri": "www.myhost.com"
+          },
+          {
+            "match": 2,
+            "uri": "www.mystartswith.com"
+          },
+          {
+            "match": 4,
+            "uri": "^https://[a-z]+\\.myregex\\.com/w/index\\.php"
+          },
+          {
+            "match": 3,
+            "uri": "www.myexact.com"
+          },
+          {
+            "match": 5,
+            "uri": "www.mynever.com"
+          }
+        ],
+        "username": "MyUsername",
+        "password": "MyPassword",
+        "totp": null
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "e78fe2b0-9282-49fc-85fa-ae45012dffdf",
+      "organizationId": null,
+      "folderId": null,
+      "type": 2,
+      "reprompt": 0,
+      "name": "Secure Note 1",
+      "notes": "This is a secure note.",
+      "favorite": false,
+      "fields": [
+        {
+          "name": "SecureCustom1",
+          "value": "I am some information",
+          "type": 0,
+          "linkedId": null
+        }
+      ],
+      "secureNote": {
+        "type": 0
+      },
+      "collectionIds": null
+    },
+    {
+      "id": "f85742e9-0868-4d05-88e9-ae450126d92a",
+      "organizationId": null,
+      "folderId": "e95f8116-1842-43ab-bd91-ae450120c631",
+      "type": 1,
+      "reprompt": 0,
+      "name": "Windows/Intranet Login",
+      "notes": null,
+      "favorite": false,
+      "fields": [
+        {
+          "name": "TDL",
+          "value": "12345678",
+          "type": 0,
+          "linkedId": null
+        }
+      ],
+      "login": {
+        "uris": [
+          {
+            "match": 2,
+            "uri": "https://intranet.rosenberg-library.org/"
+          }
+        ],
+        "username": "ehawman",
+        "password": "thisismypassword",
+        "totp": null
+      },
+      "collectionIds": null
+    }
+  ]
+}
