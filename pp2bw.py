@@ -1,4 +1,5 @@
 import json
+import csv
 
 
 def readable_list(seq, sep="and"):
@@ -125,6 +126,25 @@ class URIPattern():
 
     def match_name(self):
         return self.match_dict[self.match]
+
+class PassPlusItem():
+    # The base item type for Passwords Plus
+    
+    def __init__(self, is_template, title, category, fields=[]):
+        self.is_template = is_template
+        self.title = title
+        self.category = category
+        self.fields = fields
+
+def load_pass_plus_data(pass_plus_filename):
+
+    with open('PassPlus_sample_data.csv') as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+        pass_plus_data = []
+        for row in csvreader:
+            pass_plus_data.append(row)
+
+    meta_data = pass_plus_data.pop(0)
 
 
 
