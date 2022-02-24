@@ -48,7 +48,7 @@ class CustomField():
         self.value = value
         self.type = type
         self.linkedId = linkedId
-        if not isinstance(type, int) or type <= -1 or type >= 4:
+        if not type in CustomField.type_dict.keys():
             raise ValueError(
                 f"A type must be one of {readable_list(CustomField.type_dict.keys(), 'or')}")
 
@@ -116,7 +116,7 @@ class URIPattern():
     def __init__(self, match, uri):
         self.match = match
         self.uri = uri
-        if not isinstance(match, int) or not match in URIPattern.match_dict.keys():
+        if not match in URIPattern.match_dict.keys():
             raise ValueError(
                 f"Match must be one of {readable_list(URIPattern.match_dict.keys(), 'or')}")
 
@@ -127,84 +127,17 @@ class URIPattern():
         return self.match_dict[self.match]
 
 
-for i in range(8):
-    mytype = i
-    mylinkedId = None
-    if mytype <=1:
-        myvalue = "TESTTEXT"
-    elif mytype == 2:
-        myvalue = True
-    elif mytype == 3:
-        myvalue = None
-        mylinkedId = "test"
-    x = CustomField.get_field_class_by_type(name="myname", type=mytype, value=myvalue, linkedId=mylinkedId)
-    print(x)
 
 
-# {
-#     "items": [
-#         {
-#             "type": 1,
-#             "name": "Login Item's Name",
-#             "login": {}
-#         },
-#         {
-#             "type": 2,
-#             "name": "Secure Note Item's Name",
-#             "secureNote": {}
-#         },
-#         {
-#             "type": 3,
-#             "name": "Card Item's Name",
-#             "card": {}
-#         },
-#         {
-#             "type": 4,
-#             "name": "Identity Item's Name",
-#             "identity": {}
-#         }
-#     ]
-# }
-
-# {
-#     "folders": [
-#         {
-#             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-#             "name": "Folder Name"
-#         },
-#         ...
-#     ],
-#     "items": [
-#         {
-#             "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
-#             "organizationId": null,
-#             "folderId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-#             "type": 1,
-#             "reprompt": 0,
-#             "name": "My Gmail Login",
-#             "notes": "This is my gmail login for import.",
-#             "favorite": false,
-#             "fields": [
-#                 {
-#                     "name": "custom-field-1",
-#                     "value": "custom-field-value",
-#                     "type": 0
-#                 },
-#                 ...
-#             ],
-#             "login": {
-#                 "uris": [
-#                     {
-#                         "match": null,
-#                         "uri": "https://mail.google.com"
-#                     }
-#                 ],
-#                 "username": "myaccount@gmail.com",
-#                 "password": "myaccountpassword",
-#                 "totp": otpauth: // totp/my-secret-key
-#             },
-#             "collectionIds": null
-#         },
-#         ...
-#     ]
-# }
+# for i in range(3):
+#     mytype = i
+#     mylinkedId = None
+#     if mytype <=1:
+#         myvalue = "TESTTEXT"
+#     elif mytype == 2:
+#         myvalue = True
+#     elif mytype == 3:
+#         myvalue = None
+#         mylinkedId = "test"
+#     x = CustomField.get_field_class_by_type(name="myname", type=mytype, value=myvalue, linkedId=mylinkedId)
+#     print(x)
